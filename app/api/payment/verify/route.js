@@ -23,9 +23,9 @@ export async function GET(req) {
       client.release()
       return NextResponse.json({ success: true, message: "Already paid" })
     }
-    const baseurl = `${process.env.ENV === "prod" ? "https://api.cashfree.com" : "https://sandbox.cashfree.com"}/pg/orders/${order_id}/payments`;
-    const client_id = process.env.ENV === "prod" ? process.env.CF_APIKEY_PROD : process.env.CF_APIKEY_TEST;
-    const client_secret = process.env.ENV === "prod" ? process.env.CF_APISECRET_PROD : process.env.CF_APISECRET_TEST;
+    const baseurl = `${process.env.ENV === "prod" ? "https://sandbox.cashfree.com" : "https://sandbox.cashfree.com"}/pg/orders/${order_id}/payments`;
+    const client_id = process.env.ENV === "prod" ? process.env.CF_APIKEY_TEST : process.env.CF_APIKEY_TEST;
+    const client_secret = process.env.ENV === "prod" ? process.env.CF_APISECRET_TEST : process.env.CF_APISECRET_TEST;
     const response = await axios.get(baseurl, {
       headers: {
         "x-api-version": "2025-01-01",
@@ -70,3 +70,4 @@ export async function GET(req) {
     return NextResponse.json({ success: false, message: "Server error" }, { status: 500 })
   }
 }
+
