@@ -25,7 +25,7 @@ export default function PaymentPage() {
   const [isProcessing, setIsProcessing] = useState(false);
   const initializeSDK = async () => {
     try {
-      const cf = await load({ mode: "production" }) // or "production"
+      const cf = await load({ mode: "sandbox" }) // or "production"
       cashfreeRef.current = cf
       console.log("Cashfree initialized:", cf)
     } catch (err) {
