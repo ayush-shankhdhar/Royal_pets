@@ -33,7 +33,7 @@ export default function HomePage() {
     }
   }
   useEffect(() => {
-    document.title = 'Royal Pets'
+    document.title = 'Crown & Collar'
 
     fetch("/api/products/featured")
       .then(res => res.json())
@@ -165,7 +165,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-black via-black to-amber-500 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Welcome to Royal Pets</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Welcome to Crown & Collar</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             Your trusted partner for premium pet care products and accessories
           </p>
@@ -301,7 +301,7 @@ export default function HomePage() {
               <div className="w-20 h-20 rounded-full flex items-center justify-center">
                 <img src="/icon.png" />
               </div>
-              <span className="text-xl font-bold text-white">Royal Pets</span>
+              <span className="text-xl font-bold text-white">Crown & Collar</span>
             </div>
             <p>Your trusted partner for premium pet care products and accessories.</p>
           </div>
@@ -336,7 +336,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p>&copy; 2025 Royal Pets. All rights reserved.</p>
+          <p>&copy; 2025 Crown & Collar. All rights reserved.</p>
         </div>
       </footer>
     </div >
