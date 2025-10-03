@@ -65,7 +65,7 @@ export default function Navbar() {
             {/* Logo */}
             <div onClick={() => { router.push('/') }} className="flex items-center space-x-2 hover:cursor-pointer">
               <img src="/icon.png" className="w-13 h-10" alt="" />
-              <span className="text-xl font-bold text-white">Royal Pets</span>
+              <span className="text-xl font-bold text-white">Crown & Collar</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -206,3 +206,4 @@ export default function Navbar() {
     </>
   )
 }
+
