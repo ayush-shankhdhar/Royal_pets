@@ -26,7 +26,7 @@ export async function POST(req) {
         const sid = 'user-psession-' + uuidv4().slice(0,13);
         const res = await axios.post(
             `${process.env.ENV === "prod"
-                ? "https://api.cashfree.com"
+                ? "https://sandbox.cashfree.com"
                 : "https://sandbox.cashfree.com"
             }/pg/orders`,
             {
@@ -61,3 +61,4 @@ export async function POST(req) {
         return NextResponse.json({ success: false, message: "Payment initiation failed" }, { status: 500 })
     }
 }
+
