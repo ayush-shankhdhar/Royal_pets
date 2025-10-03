@@ -59,37 +59,37 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-black text-white sticky top-0 z-50">
+      <nav className="bg-[#] backdrop-blur-md text-black sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div onClick={() => { router.push('/') }} className="flex items-center space-x-2 hover:cursor-pointer">
               <img src="/icon.png" className="w-13 h-10" alt="" />
-              <span className="text-xl font-bold text-white">Crown & Collar</span>
+              <span className="text-xl font-bold text-black">Crowns & Collars</span>
             </div>
 
             {/* Desktop Navigation */}
             {isAdmin ?
               <div className="hidden md:flex items-center space-x-8">
-                <Link href="/" className="text-white hover:text-blue-600 transition-colors">
+                <Link href="/" className="text-black hover:text-blue-600 transition-colors">
                   Home
                 </Link>
-                <Link href="/admin" className="text-white hover:text-blue-600 transition-colors">
+                <Link href="/admin" className="text-black hover:text-blue-600 transition-colors">
                   Admin Dashboard
                 </Link>
               </div>
               :
               <div className="hidden md:flex items-center space-x-20 font-bold">
-                <Link href="/" className="text-white hover:text-amber-400 transition-colors">
+                <Link href="/" className="text-black hover:text-amber-400 transition-colors">
                   Home
                 </Link>
-                <Link href="/products" className="text-white hover:text-amber-400 transition-colors">
+                <Link href="/products" className="text-black hover:text-amber-400 transition-colors">
                   Products
                 </Link>
-                <Link href="/categories" className="text-white hover:text-amber-400 transition-colors">
+                <Link href="/categories" className="text-black hover:text-amber-400 transition-colors">
                   Categories
                 </Link>
-                <Link href="/about" className="text-white hover:text-amber-400 transition-colors">
+                <Link href="/about" className="text-black hover:text-amber-400 transition-colors">
                   About
                 </Link>
               </div>}
@@ -133,7 +133,7 @@ export default function Navbar() {
                     <User className="w-5 h-5" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-48 bg-black text-white">
+                <DropdownMenuContent align="end" className="w-48 bg-black text-black">
 
                   {isAuthenticated ?
                     <>
@@ -175,24 +175,24 @@ export default function Navbar() {
             <div className="md:hidden border-t border-gray-200 py-4">
               <div className="flex flex-col space-y-4">
                 {isAdmin ?
-                  <><Link href="/" className="text-white hover:text-blue-600 transition-colors">
+                  <><Link href="/" className="text-black hover:text-blue-600 transition-colors">
                     Home
                   </Link>
-                    <Link href="/admin" className="text-white hover:text-blue-600 transition-colors">
+                    <Link href="/admin" className="text-black hover:text-blue-600 transition-colors">
                       Admin Dashboard
                     </Link>
                   </>
                   :
-                  <><Link href="/" className="text-white hover:text-blue-600 transition-colors">
+                  <><Link href="/" className="text-black hover:text-blue-600 transition-colors">
                     Home
                   </Link>
-                    <Link href="/products" className="text-white hover:text-blue-600 transition-colors">
+                    <Link href="/products" className="text-black hover:text-blue-600 transition-colors">
                       Products
                     </Link>
-                    <Link href="/categories" className="text-white hover:text-blue-600 transition-colors">
+                    <Link href="/categories" className="text-black hover:text-blue-600 transition-colors">
                       Categories
                     </Link>
-                    <Link href="/about" className="text-white hover:text-blue-600 transition-colors">
+                    <Link href="/about" className="text-black hover:text-blue-600 transition-colors">
                       About
                     </Link>
                   </>}

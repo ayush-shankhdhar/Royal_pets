@@ -33,7 +33,7 @@ export default function HomePage() {
     }
   }
   useEffect(() => {
-    document.title = 'Crown & Collar'
+    document.title = 'Crowns & Collars'
 
     fetch("/api/products/featured")
       .then(res => res.json())
@@ -163,20 +163,20 @@ export default function HomePage() {
       <Toaster richColors position="top-right" />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#FFDD9B] via-[#FFDD9B] to-blue-500 text-white py-20">
+      <section className="bg-[#FFDD9B] text-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Welcome to Crown & Collar</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Welcome to Crowns & Collars</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             Your trusted partner for premium pet care products and accessories
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/products"><Button size="lg" className="bg-gray-900 hover:cursor-pointer text-amber-400 hover:bg-gray-800">
+            <Link href="/products"><Button size="lg" className="bg-blue-900 hover:cursor-pointer text-[#FFDD9B] hover:bg-blue-800">
               Shop Now <ArrowRight className="ml-2 w-4 h-4" />
             </Button></Link>
             <Link href="/about"><Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:cursor-pointer hover:bg-gray-100 bg-transparent"
+              className="border-white text-black hover:cursor-pointer hover:bg-gray-100 bg-transparent"
             >
               Learn More
             </Button></Link>
@@ -185,7 +185,7 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-black">
+      <section className="py-16 bg-gradient-to-br from-[#FFDD9B] via-[#FFDD9B] to-blue-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
           {[Truck, Shield, Headphones, Award].map((Icon, i) => (
             <div key={i}>
@@ -193,26 +193,26 @@ export default function HomePage() {
                 <Icon className="w-6 h-6 text-amber-400" />
               </div>
               <h3 className="font-semibold mb-2">{["Free Shipping", "Quality Guarantee", "24/7 Support", "Premium Quality"][i]}</h3>
-              <p className="text-gray-400 text-sm">{["On orders over ₹150", "100% satisfaction guaranteed", "Always here to help", "Only the best for your pets"][i]}</p>
+              <p className="text-black text-sm">{["On orders over ₹150", "100% satisfaction guaranteed", "Always here to help", "Only the best for your pets"][i]}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Categories */}
-      <section className="py-16 bg-black">
+      <section className="py-16 bg-gradient-to-br from-[#FFDD9B] via-blue-500 to-blue-500">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Shop by Category</h2>
-          <p className="text-gray-400 mb-12">Find everything your pet needs in our categories</p>
+          <p className="text-white mb-12">Find everything your pet needs in our categories</p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {categories.map((cat, i) => (
-              <Card key={i} className="bg-gray-800 hover:shadow-lg">
+              <Card key={i} className="bg-white/30 backdrop-blur-lg hover:shadow-lg">
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-gray-700 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <img src={cat.image} className="h-12" />
                   </div>
-                  <h3 className="font-semibold mb-1 text-white">{cat.name}</h3>
-                  <p className="text-sm text-gray-400">{cat.count} items</p>
+                  <h1 className="font-semibold mb-1 text-lg text-black">{cat.name}</h1>
+                  <p className="text-md text-blue-950">{cat.count} items</p>
                 </CardContent>
               </Card>
             ))}
@@ -221,11 +221,11 @@ export default function HomePage() {
       </section>
 
       {/* Featured Products */}
-      <section className="py-16 bg-gray-800">
+      <section className="py-16 bg-gradient-to-br via-blue-500 from-blue-500 to-[#FFDD9B]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center mb-12">
             <div>
-              <h2 className="text-3xl font-bold text-white mb-2">Featured Products</h2>
+              <h2 className="text-3xl font-bold text-black mb-2">Featured Products</h2>
               <p className="text-gray-400">Handpicked favorites for your beloved pets</p>
             </div>
           </div>
@@ -254,14 +254,14 @@ export default function HomePage() {
                     <div className="flex items-center justify-between">
                       <Button
                         onClick={() => changeQuantity(product.id, "dec")}
-                        className="hover:cursor-pointer hover:scale-[1.02] transition-all bg-gradient-to-br from-black via-black to-amber-500 font-bold text-2xl text-white w-20"
+                        className="hover:cursor-pointer hover:scale-[1.02] transition-all bg-gradient-to-br from-black via-black to-amber-500 font-bold text-2xl text-black w-20"
                       >
                         -
                       </Button>
                       <span className="text-lg font-bold">{qty}</span>
                       <Button
                         onClick={() => changeQuantity(product.id, "inc")}
-                        className="hover:cursor-pointer hover:scale-[1.02] transition-all bg-gradient-to-br from-black via-black to-amber-500 font-bold text-2xl text-white w-20"
+                        className="hover:cursor-pointer hover:scale-[1.02] transition-all bg-gradient-to-br from-black via-black to-amber-500 font-bold text-2xl text-black w-20"
                       >
                         +
                       </Button>
@@ -269,7 +269,7 @@ export default function HomePage() {
                   ) : (
                     <Button
                       onClick={() => addToCart(product.id)}
-                      className="bg-gradient-to-br from-black via-black to-amber-500 text-white hover:cursor-pointer hover:scale-[1.02] transition-all w-full"
+                      className="bg-gradient-to-br from-black via-black to-amber-500 text-black hover:cursor-pointer hover:scale-[1.02] transition-all w-full"
                     >
                       Add to Cart
                     </Button>
@@ -282,61 +282,61 @@ export default function HomePage() {
       </section>
 
       {/* Newsletter */}
-      <section className="py-16 bg-gradient-to-br from-black via-black to-amber-400 text-white">
+      <section className="py-16 bg-gradient-to-br to-[#FFDD9B] via-[#FFDD9B] from-blue-500 text-black">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">Get offers and pet care tips in your inbox</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" className="flex-1 px-4 py-2 rounded-lg text-white border-2 border-white" />
-            <Button onClick={handleSubscribe} className="bg-gray-900 text-white hover:bg-gray-800 hover:cursor-pointer">Subscribe</Button>
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" className="flex-1 px-4 py-2 rounded-lg text-black border-2 border-white" />
+            <Button onClick={handleSubscribe} className="bg-gray-900 text-black hover:bg-gray-800 hover:cursor-pointer">Subscribe</Button>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-950 text-gray-400 py-12">
+      <footer className="bg-[#FFDD9B] text-black py-12">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-20 h-20 rounded-full flex items-center justify-center">
                 <img src="/icon.png" />
               </div>
-              <span className="text-xl font-bold text-white">Crown & Collar</span>
+              <span className="text-xl font-bold text-black">Crowns & Collars</span>
             </div>
             <p>Your trusted partner for premium pet care products and accessories.</p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-white mb-4">Quick Links</h3>
+            <h3 className="font-semibold text-black mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="/tnc" className="hover:text-white">Terms and Conditions</a></li>
-              <li><a href="/faq" className="hover:text-white">FAQ</a></li>
-              <li><a href="/contact" className="hover:text-white">Contact Us</a></li>
-              <li><a href="/refunds" className="hover:text-white">Cancellation and Refunds</a></li>
+              <li><a href="/tnc" className="hover:text-black">Terms and Conditions</a></li>
+              <li><a href="/faq" className="hover:text-black">FAQ</a></li>
+              <li><a href="/contact" className="hover:text-black">Contact Us</a></li>
+              <li><a href="/refunds" className="hover:text-black">Cancellation and Refunds</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold text-white mb-4">Categories</h3>
+            <h3 className="font-semibold text-black mb-4">Categories</h3>
             <ul className="space-y-2">
-              <li><a href="/categories/dogs" className="hover:text-white">Dog Supplies</a></li>
-              <li><a href="/categories/cats" className="hover:text-white">Cat Supplies</a></li>
-              <li><a href="/categories/birds" className="hover:text-white">Bird Supplies</a></li>
-              <li><a href="/categories/fish" className="hover:text-white">Fish & Aquarium</a></li>
+              <li><a href="/categories/dogs" className="hover:text-black">Dog Supplies</a></li>
+              <li><a href="/categories/cats" className="hover:text-black">Cat Supplies</a></li>
+              <li><a href="/categories/birds" className="hover:text-black">Bird Supplies</a></li>
+              <li><a href="/categories/fish" className="hover:text-black">Fish & Aquarium</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold text-white mb-4">Contact Info</h3>
+            <h3 className="font-semibold text-black mb-4">Contact Info</h3>
             <ul className="space-y-2">
-              <li>📧 ayushshukla8920@gmail.com</li>
-              <li>📞 +91 8979274928</li>
+              <li>📧 ayushshankhdhar44@gmail.com</li>
+              <li>📞 +91 8791898219</li>
               <li>📍 Bareilly, Uttar Pradesh</li>
             </ul>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p>&copy; 2025 Crown & Collar. All rights reserved.</p>
+          <p>&copy; 2025 Crowns & Collars. All rights reserved.</p>
         </div>
       </footer>
     </div >
