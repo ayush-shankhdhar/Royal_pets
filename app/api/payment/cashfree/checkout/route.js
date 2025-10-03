@@ -21,8 +21,8 @@ export async function POST(req) {
             const prod = products.find(p => p.id === item.product_id)
             if (prod) total += prod.price * item.quantity
         }
-        const client_id = process.env.ENV === "prod" ? process.env.CF_APIKEY_PROD : process.env.CF_APIKEY_TEST;
-        const client_secret = process.env.ENV === "prod" ? process.env.CF_APISECRET_PROD : process.env.CF_APISECRET_TEST;
+        const client_id = process.env.ENV === "prod" ? process.env.CF_APIKEY_TEST : process.env.CF_APIKEY_TEST;
+        const client_secret = process.env.ENV === "prod" ? process.env.CF_APISECRET_TEST : process.env.CF_APISECRET_TEST;
         const sid = 'user-psession-' + uuidv4().slice(0,13);
         const res = await axios.post(
             `${process.env.ENV === "prod"
@@ -61,4 +61,5 @@ export async function POST(req) {
         return NextResponse.json({ success: false, message: "Payment initiation failed" }, { status: 500 })
     }
 }
+
 
