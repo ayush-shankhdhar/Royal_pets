@@ -158,12 +158,12 @@ export default function HomePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100">
+    <div className="min-h-screen bg-[#FFDD9B] text-black">
       <Navbar />
       <Toaster richColors position="top-right" />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-black via-black to-amber-500 text-white py-20">
+      <section className="bg-gradient-to-br from-[#FFDD9B] via-[#FFDD9B] to-blue-500 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">Welcome to Crown & Collar</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
